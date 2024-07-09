@@ -22,7 +22,7 @@ export const todoSlice = createSlice({
             state.todos=state.todos.filter((todo) => todo.id !==action.payload)
         },
         updateTodo:(state,action)=>{
-            console.log("start",action.payload)
+            
             state.todos=state.todos.map((todo,i)=>{
                 if(i+1!=action.payload.id){
                     return todo
@@ -35,7 +35,7 @@ export const todoSlice = createSlice({
                     
                 }
             })
-            console.log("wokred",state.todos)
+            
         }
     }
 
